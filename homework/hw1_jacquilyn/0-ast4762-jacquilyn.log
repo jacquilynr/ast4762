@@ -1,0 +1,265 @@
+Jacquilyn Reilly
+Loh for AST 4762, Fall 2026
+
+*****IN: Wed Aug 26 15:07:00 EDT 2026
+Opened TextEdit, started this log, saved as:
+/Desktop/0-ast4762-jacquilyn.log
+Name: Jacquilyn Reilly
+Username: Jacquilyn
+What astronomy classes have you taken?:
+AST2002: Astronomy, AST3110: Solar System Astronomy, AST4152: Planetary Geophysics, AST4700: Experimental Methods in Astronomy
+Are you generally comfortable with calculus and physics?:
+Yes
+Have you ever programmed a computer?:
+Yes
+In what language(s)?:
+Python
+Have you ever taken a programming class, if so which?:
+Yes, COP2500: Concepts in Computer Science, and the LPS Qubit Collaborator Quantum Computing Summer Short Course
+Will you be attending the DPS conference this year, or will you be away otherwise?:
+I have no current plans to do so
+Why are you taking this course?:
+To become comfortable using computing methods to make my science more accurate, reliable, and faster to perform and retrieve
+Are there particular topics you hope to learn?:
+I am interested in any graphic techniques that may be useful
+If you have programmed outside this course before, please briefly describe:
+I was the lead of a team which programmed payloads for a weather balloon line in the National Eclipse Ballooning Project from 2022-2024 and in the previously mentioned Quantum Computing course we practiced programming quantum computers remotely
+If you have worked with scientific data before, briefly describe your experience:
+I under Dr. Jayan Thomas in 2022 on perovskite solar cell research and development, and later under Dr. Donaldson Hanna and Dr. Martin on spectroscopically matching the Trojan Asteroids to determine their composition
+Please describe any projects in astronomy, including involvement in amateur groups, owning a telescope, research, et.: See above... This past summer I interned at the Planetarium in the Bishop Museum of Nature and Science
+After closing this file: 
+Will make folder hw0_jacquilyn/
+Will copy 0-ast4762-jacquilyn.log into hw0-jacquilyn/
+Will zip hw0_jacquilyn/
+Will submit zipped file to Webcourses
+*****OUT: Wed Aug 26 15:25:00 EDT 2026
+
+
+
+
+
+*****IN: Fri Aug 28 9:46:00 EDT 2026
+Had to rename this file back to 0-ast4762-jacquilyn.txt to be able to edit the document; will switch back to 0-ast4762-jacquilyn.log after logging out.
+Opened "Mac Software Installation" document to begin following instructions to install programs needed.
+
+Beginning with section: 1 Unix Shell Part 1: Backup
+Used spotlight to open terminal
+From the doc double clicked terminal > options > keep in doc to save terminal to the doc
+Entered the following:
+  cd
+  mkdir .bask_prePHZ3150
+  cp -a .bashrc .bask profile . profile .bask alaiases .bash_prePHZ3150
+Got return:
+  cp: bash_prePHZ3150 is not a directory
+Using a screenshot of the instructions and one of the terminal, I asked chatgpt how to fix my mistake by asking "how do I better follow these directions?"
+Saved chatgpt conversation
+I'm hungry so I'm gonna take a break to make and eat food
+Going to exit out and then rename this file 0-as4762-jacquilyn.log
+*****OUT: Fri Aug 28 10:02:00 EDT 2026
+
+
+
+
+
+*****IN: Fri Aug 28 14:23:00 EDT 2026
+Renamed file again to open, as was done previously
+Terminal still launched from previous entry 
+
+Ran commands: 
+  Rm -r .bask_prePHZ3150
+  Mkdir .bash_prePHZ3150
+  Cp -a .bashrc .bash_profile .bash_aliases .bash_prePHZ3150
+Got return:
+  Cp: .bashrc: No such file or directory
+  Cp: .bash_aliases: No such file or directory
+Noted instruction: "Don't worry about any "file not found" messages.
+
+Began following instructions for "2 Miniconda" paragraph
+Opened link in instructions > anaconda.com/download link > sign in > Anaconda (per suggestion from lecture slide) 64-bit graphical installer AND miniconda 64-bit graphical installer
+Finished installation following instructions in Miniconda popup, closed popup, and moved installer to trash
+Finished installation following instructions in Anaconda popup, got message that /opt/anaconda3 already exist and installation failed, moved installer to trash
+Ran following command(s) in terminal:
+  Cd ~/Downloads
+  Bash Miniconda3-latest-MacOX-x86_64.sh
+Returned: 
+  No such file or directory
+Ran following command(s) in terminal:
+  Source ~/.bash_profile
+  Conda update --all
+Returned:
+  Option to accept Terms of services twice, answered accept both times, then responded yes to proceeding with the download of packages
+
+Moved to follow instructions from "AST 4762/5765: Astronomical Data Analysis" document
+Began with Python:
+Opened launchpad > anaconda navigator > kept anaconda navigator in doc
+Launched Jupyter notebook > Desktop > ast4762 > new 
+No option for Python 3
+Downloaded Python 3.14.7 from python.org website
+Back to Jupyter Notebook, refreshed page
+Still no Python 3 option
+Chose "Notebook" option and was then given option to select Python 3 under Select Kernel
+
+Started following GitHub instructions:
+Opened https://desktop.github.com/ > download > download for apple silicon 
+Opened GitHub > moved GitHub to applications folder and reopened
+Kept GitHub in doc
+Noted that username is jacquilynr for my account under ja999265@ucf.edu, attempted to rename myself to jacquilyn, jacquilyn is unavailable 
+
+Started following Unix instructions:
+Opened https://brew.sh/
+Copied command on homepage and pasted into terminal > entered password > continued
+
+Back to "Mac Software Installation" > "Miniconda"
+Ran following commands in terminal:
+  Cd ~/Downloads
+  Bash Miniconda3-latest-MacOSX-x86_64.sh
+Still returned no such file or directory
+
+2.1 Add Packages to Conda
+Ran the following commands in terminal:
+  Conda install numpy scipy python matplotlib
+Successful download
+
+2.2 Spyder
+Ran the following commands in terminal:
+  Conda install Spyder
+Successful download
+Ran the following commands in terminal:
+  Spyder &
+
+2.3 Jupyter
+Ran the following commands in terminal:
+  Conda install Jupyter
+Successful download
+Ran the following commands in terminal:
+  Jupyter notebook &
+
+Began following 2.4 Customizing the Shell
+Downloaded bash_aliases from webourses > launched it
+Downloaded mac-add-to-bash-inits from web courses > launched it
+Ran the following commands in terminal (until any further note, indented lines will be commands ran in terminal):
+  mv -i ~/Downloads/bash-aliases ~/.bash_aliases
+  mv -i ~/Downloads/mac-add-to-bash-inits ~/
+  ls .profile .bash_profile .bashrc
+No files exist
+  cd ~
+  ls .profile .bash_profile .bashrc
+.bash_profile exists
+  Cat Mac-add-to-bash-inits >> ~/.bash_profile
+
+4 Emacs
+  Brew cask install emacs
+Command not found
+  ~ cd
+Retrying homebrew download:
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Successful download
+  Brew cask install emacs
+Command not found
+Realized I didn't add home-brew to my path
+  echo >> /Users/jacquilynolivia/.bash_profile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv bash)"' >> /Users/jacquilynolivia/.bash_profile
+  eval "$(/opt/homebrew/bin/brew shellenv bash)"
+  Brew cask install emacs
+Error: did you mean casks?
+  Brew casks install emacs
+Resource temporarily unavailable
+  emacs &
+Command not found
+  Emacs 0-ast4762-jacquilyn.txt
+Command not found
+  Brew casks install emacs
+
+Jumped to Git, planning to go back to fix previous issues
+  Brew install git
+Successful installation
+
+Back to Emacs:
+  Brew casks install emacs
+Resource temporarily unavailable
+ Brew cask install emacs
+Unknown command: did you mean casks?
+ Casks install emacs
+
+Bro wtf im going on a bathroom break
+*****OUT: Aug 28 16:02:00 EDT 2026
+
+
+
+
+*****IN: Aug 28 16:05:00 EDT 2026
+Attempting Stokes
+Terminal still open
+Closed Terminal and Reopened
+  Ssh ja999265@stokes.ist.ucf.edu
+Blank response when expecting a Password prompt
+Operation timed out
+*****OUT: Aug 28 16:20:00 EDT 2026
+
+
+
+
+*****IN: Aug 29 21:59:00 EDT 2026
+Began working on Homework 1
+Made folder hw1_jacquilyn
+ under my ast4762 homework folder
+Started Jupyter through Anaconda and took a screenshot using command+shift+4; named screenshot hw1_jacquilyn_problem2_screenshot_Jupyter.png
+Started GitHub and took a screenshot using command+shift+4; named screenshot hw1_jacquilyn_problem2_screenshot_GitHub.png
+Added both screenshots to hw1_jacquilyn
+*****OUT: August 29 22:11:00 EDT 2026
+
+
+
+
+******IN: Aug 31 12:26:00 EDT 2026
+Began working on hw 1 pt 3
+Opened Stokes document to try connecting again
+Launched Terminal
+Downloaded Cisco
+Can't connect to VPN because my account is blocked
+Logging out and going to campus
+*****OUT: Aug 31 12:55:00 EDT 2026
+
+
+
+
+*****IN: Aug 31 13:41:00 EDT 2026
+Trying to connect to UCF_WPA2
+Can't seem to connect, trying UCF_Guest
+Connected to UCF_Guest
+Ran following commands in terminal:
+  Ssh ja999265@stokes.ist.ucf.edu
+Operation timed out
+Still cannot connect to ucfwpa2
+Okay I actually cannot connect to any wifi other than guest so I'm going to need help in class with that because I don't know what I'm doing wrong. I even reset my passwords when prompted but it still isn't working. I hope when I get this problem fixed I can resubmit this homework for full points.
+Took a screenshot of terminal output anyway using command+shift+4; named screenshot hw1_jacquilyn_problem3_screenshot_terminal.png 
+added screenshot to hw1_jacquilyn
+
+After logging out of this log I will:
+Right click log to remake it back to 0-ast4762-jacquilyn.log
+Right click to copy log and paste copy into hw1_jacquilyn
+Right click hw1_jacquilyn > compress "hw1_jacquilyn"
+Submit this compressed (zipped) file to HW1 assignment on web courses 
+*****OUT: Aug 31 14:04:00 EDT 2026
+
+
+
+
+*****IN: Aug 31 14:37:00 EDT 2026
+Renamed this document to 0-ast4762-jacquilyn.txt to be able to open and edit
+Reset Ucf password through https://mail.ucf.edu/ (thanks Quiran)
+Launched terminal and ran command:
+  Ssh ja999265@stokes.ist.ucf.edu
+Successful!
+Entered password
+All systems operating normally!!!!
+Took screenshot of terminal using shift+command+4
+Renamed screenshot hw1_jacquilyn_problem3_screenshot_stokes.png
+Added screenshot to hw1 folder
+
+After logging out I will
+Rename this document back to 0-ast4762-jacquilyn.log
+Right click the document > copy > paste into hw1_jacquilyn
+Right click hw1_jacquilyn > compress "hw1_jacquilyn"
+Then submit this compressed (zipped) file as my second attempt for homework 1
+*****OUT: Aug 14:43:00 EDT 2026
