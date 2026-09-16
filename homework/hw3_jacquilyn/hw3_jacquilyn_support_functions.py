@@ -56,26 +56,69 @@ def square(x):
     '''
 
 
+#Function 2
+def squareplot(low, high, num, saveplot=False):
+    '''
+    Plots the squares of numbers against themselves.
 
 
-# In[9]:
+    Squareplot will use numbers within a specific range you give, and square
+    them, then plot these squares against the original number. The graph created
+    will use equally spaced points, the number of which is specified by the user's
+    input, allowing the user to determine the specificity of the graph. The user
+    also has the choice to save the plot as a png after the function is performed.
+
+    
+    Parameters
+    ----------
+    low: int
+        the low end of your range
+    high: int
+        the high end of your range
+    num: int
+        The number of data points to be incuded in your range
+    saveplot: {'False', 'True'}, optional
+        Optional choice to save the plot
 
 
-#Tests
-
-a= (5, 7, 8)
-b= numpy.arange(6).reshape(3,2)
-
-aprime= square(a)
-
-bprime= square(b)
-
-print(aprime)
-print(bprime)
+    Returns
+    -------
+    Graph: plot
+        A plot of squared numbers vs original numbers
 
 
-# In[ ]:
+    Example
+    -------
+    >>> squareplot(0, 100, 10, True)
+    
+    Please enter the file name you would like to use for your plot:
+    >>>Square Plot
+    ###I don't understand what to put here
+    
 
+    '''
+    
+    import numpy
+    import matplotlib
+    import matplotlib.pyplot
+
+    #Creating array x and squaring it into array y
+    x= numpy.linspace(low, high, num)
+    y= square(x)
+
+    #Plotting y vs x
+    matplotlib.pyplot.plot(x, y)
+    
+    matplotlib.pyplot.title("Square Function")
+    matplotlib.pyplot.xlabel("Input")
+    matplotlib.pyplot.ylabel("Output")
+
+
+    #Saving plot
+    if saveplot==True:
+        name= input("Please enter the file name you would like to use for your plot: ")
+        matplotlib.pyplot.savefig(f"{name}.png")
+       
 
 
 
